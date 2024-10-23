@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container input[type="date"],
+        .form-container input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registro de Usuário</h2>
+    <form action="sucesso.html" method="POST">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+       
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+
+        <label for="data_nascimento">Data de Nascimento</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+        <label for="telefone">Número de Telefone</label>
+        <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu número de telefone">
+
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
+
+        <label for="new_usuario">Usuário</label>
+        <input type="text" id="new_usuario" name="new_usuario" required placeholder="Digite seu usuário">
+
+        <label for="new_senha">Senha</label>
+        <input type="password" id="new_senha" name="new_senha" required placeholder="Digite sua senha">
+
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+
+</body>
+</html>

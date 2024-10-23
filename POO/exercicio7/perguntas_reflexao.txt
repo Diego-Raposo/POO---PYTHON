@@ -1,0 +1,38 @@
+Perguntas para Reflexão:
+1. Como a composição facilita a criação de relações complexas entre
+objetos?
+    A composição permite que as classes 
+    sejam construídas utilizando objetos de outras classes como parte de sua estrutura interna. 
+
+2. Qual é a vantagem de usar composição em vez de herança neste
+exercício?
+    A vantagem de utilizar composição em vez de herança aqui é a flexibilidade e a modularidade que ela oferece.
+    Se fosse utilizada herança, teríamos uma relação "é um" (por exemplo, Aluno seria um Curso, o que não faz sentido).
+3. Como o encapsulamento é utilizado nas classes Aluno, Curso e Escola?
+Encapsulamento é a prática de esconder detalhes internos e 
+expor apenas o que é necessário através de métodos públicos. No exemplo:
+
+    Classe Aluno: O nome e a matrícula do aluno são atributos 
+    privados que são manipulados e acessados somente por métodos 
+    como mostra_info. Isso permite controlar como essas informações são exibidas ou modificadas.
+
+    Classe Curso: Os cursos têm uma lista de alunos que não 
+    é diretamente acessível de fora da classe. A única forma de 
+    modificar essa lista é através de métodos como adicionar_aluno, 
+    garantindo que a lógica de como os alunos são adicionados seja controlada e segura.
+
+    Classe Escola: Da mesma forma, a lista de cursos é privada e só pode 
+    ser manipulada através de métodos como adicionar_curso e mostrar_cursos, 
+    escondendo a complexidade interna de como os cursos são armazenados.
+
+4. Como você pode estender este sistema para incluir novas
+funcionalidades, como notas dos alunos e professores para cada curso?
+
+Para estender o sistema e incluir novas funcionalidades, como notas dos alunos e professores, você pode:
+
+    Notas dos alunos: Adicionar um campo para armazenar as notas de cada aluno, onde
+    cada aluno teria suas notas associadas a disciplinas. Cursos poderiam ter métodos para atribuir e exibir essas notas.
+
+    Professores: Criar uma classe de professores e associar professores a cada curso, 
+    permitindo que cada curso tenha um ou mais professores. Isso adicionaria mais flexibilidade 
+    ao sistema sem complicar sua estrutura atual.

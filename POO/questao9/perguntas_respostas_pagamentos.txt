@@ -1,0 +1,21 @@
+1. O que acontece se você adicionar um novo método de pagamento sem
+modificar a função processar?
+    Se um novo método de pagamento for adicionado (como uma classe PagamentoPayPal), 
+    ele deve implementar seu próprio método processar_pagamento para lidar com a lógica específica daquele pagamento.
+
+2. Como o polimorfismo ajuda a manter o código flexível e extensível?
+    Poder adicionar novos tipos de 
+    pagamento sem modificar o código existente que chama o método processar_pagamento.
+    
+3. Qual é a diferença entre a função processar e os métodos
+processar_pagamento nas subclasses?
+    A função processar é uma interface ou base que define que cada subclasse deve implementar 
+    o método processar_pagamento. As subclasses fornecem a implementação concreta desse método.
+
+4. Como você pode garantir que todos os métodos de pagamento
+implementem o método processar_pagamento corretamente?
+
+    Uma maneira de garantir isso é usar classes abstratas e métodos abstratos. Em Python, 
+    isso pode ser feito utilizando o módulo abc (Abstract Base Class). Isso força as subclasses 
+    a implementarem o método processar_pagamento. Caso contrário, 
+    o Python lançará um erro se tentarmos instanciar uma classe que não implementou todos os métodos abstratos.
