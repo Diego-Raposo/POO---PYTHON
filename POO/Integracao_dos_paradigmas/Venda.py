@@ -1,3 +1,4 @@
+from functools import reduce
 class Venda: 
     def __init__(self, nome_produto, quantidade_vendida, preco_unitario):
         self._nome_produto = nome_produto
@@ -40,9 +41,7 @@ class Venda:
     def mostra_info(self):
         print(f"Nome produto: {self.nome_produto} || Quantidade Vendida: {self.quantidade_vendida} || preco_unitario: {self.preco_unitario}")
     
-    def total_por_produto(self):
-        total = self.quandidade_vendida*self._preco_unitario
-        print(f'Valor total da venda: {total}')
+   
         
 class HistoricoVendas:
     lista_vendas = [
@@ -51,7 +50,10 @@ class HistoricoVendas:
         Venda("Notebook", 1, 4500),
         Venda("Celular", 2, 1800.80)
     ]
+    def total_por_produto(self):
+        total = list(reduce(lambda x, y: x*y, self.lista_vendas))
+        print(f"Total: {total}")
 
-venda = Venda("Camisa", 2, 35.90)
-venda.mostra_info()
-venda.total_por_produto()
+
+vendas = HistoricoVendas()
+print(vendas.total_por_produto())
